@@ -44,9 +44,34 @@
     /* Contenedor: utilizado para contener los elementos absolutos y relativos */
     .container {
       position: relative;  /* Establece un contexto de posicionamiento para elementos hijos absolutos */
-      height: 200px;
+      height: 20px;
       background-color: lightpink;
     }
+
+        @media (max-width: 600px) {
+      .container {
+        background-color: lightblue;  /* Fondo azul claro en pantallas pequeñas */
+      }
+    }
+
+    @media (min-width: 601px) and (max-width: 1024px) {
+      .container {
+        background-color: lightgreen;  /* Fondo verde claro en pantallas medianas */
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .container {
+        background-color: lightcoral;  /* Fondo coral claro en pantallas grandes */
+      }
+    }
+
+    @media (orientation: landscape) {
+      .container {
+        border-color: blue;  /* Cambia el color del borde a azul en modo paisaje */
+      }
+    }
+
   </style>
 </head>
 <body>
